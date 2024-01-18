@@ -30,7 +30,7 @@ class LoadingScreen {
     _controller = null;
   }
 
-  LoadingScreenController? showOverlay({
+  LoadingScreenController showOverlay({
     required BuildContext context,
     required String text,
   }) {
