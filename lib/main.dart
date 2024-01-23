@@ -2,11 +2,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_clone/firebase_options.dart';
-import 'package:instagram_clone/state/auth/providers/auth_state_provider.dart';
 import 'package:instagram_clone/state/auth/providers/is_logged_in_provider.dart';
 import 'package:instagram_clone/state/providers/is_loading_provider.dart';
 import 'package:instagram_clone/views/components/loading/loading_screen.dart';
 import 'package:instagram_clone/views/login/login_view.dart';
+import 'package:instagram_clone/views/main/main_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,29 +39,6 @@ class MyApp extends StatelessWidget {
           });
           final isLoggedIn = ref.watch(isLoggedInProvider);
           return isLoggedIn ? const MainView() : const LoginView();
-        },
-      ),
-    );
-  }
-}
-
-class MainView extends StatelessWidget {
-  const MainView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('LoginView'),
-      ),
-      body: Consumer(
-        builder: (context, ref, child) {
-          return TextButton(
-            onPressed: () async {
-              await ref.read(authStateProvider.notifier).logOut();
-            },
-            child: const Text('Logout'),
-          );
         },
       ),
     );
