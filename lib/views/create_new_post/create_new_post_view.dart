@@ -81,7 +81,7 @@ class _CreateNewPostViewState extends ConsumerState<CreateNewPostView> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: Strings.pleaseWriteYourMessageHere,
                 ),
                 autofocus: true,
