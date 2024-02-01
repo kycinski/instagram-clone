@@ -5,8 +5,7 @@ import 'package:instagram_clone/views/components/animations/empty_contents_with_
 import 'package:instagram_clone/views/components/animations/error_animation_view.dart';
 import 'package:instagram_clone/views/components/animations/loading_animation_view.dart';
 import 'package:instagram_clone/views/components/post/post_grid_view.dart';
-
-import '../../constants/strings.dart';
+import 'package:instagram_clone/views/constants/strings.dart';
 
 class UserPostsView extends ConsumerWidget {
   const UserPostsView({super.key});
