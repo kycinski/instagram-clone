@@ -3,10 +3,10 @@ import 'package:instagram_clone/state/posts/models/post.dart';
 import 'package:instagram_clone/views/components/post/post_thumbnail_view.dart';
 import 'package:instagram_clone/views/post_details/post_details_view.dart';
 
-class PostGridView extends StatelessWidget {
+class PostsGridView extends StatelessWidget {
   final Iterable<Post> posts;
 
-  const PostGridView({
+  const PostsGridView({
     super.key,
     required this.posts,
   });

@@ -7,6 +7,7 @@ import 'package:instagram_clone/views/extensions/dismiss_keyboard.dart';
 
 class SearchView extends HookConsumerWidget {
   const SearchView({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final controller = useTextEditingController();
